@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href={% block style %}{% endblock %} rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+    {% include('header.html.twig') %}
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    {% include('footer.html.twig') %}
+</div>
+<script type="module" src="/scripts/script.js"></script>
+</body>
+</html>

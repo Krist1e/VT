@@ -1,6 +1,0 @@
-<Files 403_page.html>
-    Order allow,deny
-    Deny from all
-</Files>
-
-ErrorDocument 404 /404_page.html

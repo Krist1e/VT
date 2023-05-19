@@ -112,6 +112,16 @@ button:hover {
     flex: 0 1 400px;
 }
 
+.login__error-message {
+    display: none;
+    color: red;
+    padding: 0 3px;
+}
+
+.login__error-message.active {
+    display: block;
+}
+
 @media screen and (max-width: 700px) {
     .navbar__container, .navbar__pages {
         flex-direction: column;

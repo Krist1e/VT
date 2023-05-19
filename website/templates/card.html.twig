@@ -1,0 +1,19 @@
+<div class="card cards__item">
+    <div class="card__title">
+        {{ card.title }}
+    </div>
+    <div class="card__content">
+        <div class="card__cover">
+            <img src="{{ card.cover }}" alt="cover"/>
+        </div>
+        <div class="card__description">
+            {{ card.description }}
+        </div>
+    </div>
+    <div class="card__purchase">
+        <div class="card__price">
+            ${{ card.price }}
+        </div>
+        <button class="card__buy-button">Buy</button>
+    </div>
+</div>

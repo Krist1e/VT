@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Online Shop{% endblock %}
+
+{% block style %}"css/registration.css"{% endblock %}
+
+{% block content %}
+    <div class="register-form__container">
+        <form class="register-form register">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <label><b>Confirm password</b></label>
+            <input type="password" placeholder="Enter Password" name="confirmPassword" required>
+
+            <button type="submit"><a>Register</a></button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+
+            <div class="register__error-message"></div>
+            <span class="register__sign-in-button">Already have an account? <a href="/login">Sign In</a></span>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1 1 auto;
+}
+
+.navbar__container {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    justify-content: center
+}
+
+.navbar {
+    background-color: #ffeeae;
+}
+
+.navbar a {
+    padding: 14px 30px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+.navbar__pages, .navbar__icons {
+    display: flex;
+    justify-content: center;
+}
+.footer__container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.footer {
+    background: #ffeeae;
+}
+
+.footer__message {
+    font-size: 1rem;
+}
+
+.footer__socials {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+}
+
+.footer__socials a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #fde17c;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.7;
+    color: black;
+}
+
+.register-form__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form__input {}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    flex: 0 1 400px;
+}
+
+.register__error-message {
+    display: none;
+    color: red;
+    padding: 0 3px;
+}
+
+.register__error-message.active {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar__container, .navbar__pages {
+        flex-direction: column;
+    }
+}

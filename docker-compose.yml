@@ -1,0 +1,27 @@
+version: '3.2'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: web
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./website:/var/www/html
+    working_dir: /var/www/html
+    depends_on:
+      - db
+  db:
+    image: mysql:latest
+    container_name: db
+    restart: always
+    ports:
+      - "33056:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=kris123
+    volumes:
+      - db_data:/var/lib/mysql
+volumes:
+  db_data:
